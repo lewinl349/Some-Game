@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.TextCore.Text;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,7 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Vector3 desiredLocalPoint = new Vector3(0, -1, 0);
 
     [Header("Characters")]
-    [SerializeField] private GameObject[] characters;
+    [SerializeField] public GameObject[] characters;
     [SerializeField] private int defaultCharacter = 0;
     [SerializeField] private int currentCharacter = 0;
 
@@ -37,7 +36,7 @@ public class PlayerController : MonoBehaviour
     private void getCharacterInfo()
     {
         character = GetComponentInParent<Character>();
-        moveSpeed = character.speed;
+        moveSpeed = character.GetSpeed();
         characterController = GetComponentInParent<CharacterController>();
     }
 

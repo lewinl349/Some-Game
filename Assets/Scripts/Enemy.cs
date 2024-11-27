@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Character : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     [Header("Base Stats")]
     [SerializeField] private float baseSpeed = 10.0f;
@@ -36,8 +36,19 @@ public class Character : MonoBehaviour
         Debug.Log("Default Attack");
     }
 
-    public virtual void Ability()
+    public virtual void TakeDMG(float dmg)
     {
-        Debug.Log("Default Ability");
+        // In the future use a different script to calculate dmg taken
+        currentHP -= dmg;
+
+        if (currentHP <= 0)
+        {
+            defeated();
+        }
+    }
+
+    public virtual void defeated()
+    {
+        Destroy(gameObject);
     }
 }
