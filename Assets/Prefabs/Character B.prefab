@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 333572342767048332}
   - component: {fileID: 6802554636383795168}
   - component: {fileID: 8523209438248411040}
+  - component: {fileID: 3086704856856436825}
   m_Layer: 0
   m_Name: Cone Attack
   m_TagString: Untagged
@@ -343,7 +344,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4594
+  m_VersionIndex: 4609
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -447,3 +448,17 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &3086704856856436825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6773187039730288142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b59614fb3235ae4cb663f9bd99c30e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 1
+  mainDMGMultiplier: 0.5

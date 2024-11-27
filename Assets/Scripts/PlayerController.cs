@@ -76,4 +76,9 @@ public class PlayerController : MonoBehaviour
 
         getCharacterInfo();
     }
+
+    private void OnAttack()
+    {
+        character.Attack();
+    }
 }
